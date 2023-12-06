@@ -1,0 +1,74 @@
+<html>
+<head>
+<script>
+function exam()
+{
+	var name=document.getElementById("name").value;
+	if(name=="")
+	{
+		alert("Name can't be blank");
+	}
+	var m=0;
+	if(document.examForm.one.value=="Hyper Text Markup Language")
+	m=m+1;
+	if(document.examForm.two.value=="br")
+	m=m+1;
+	if(document.examForm.three.value=="Destination of a link")
+	m=m+1;
+	if(document.examForm.four.value=="Cascading Style Sheet")
+	m=m+1;
+	if(document.examForm.five.value=="background-color")
+	m=m+1;
+	if(document.examForm.six.value=="text-indent")
+	m=m+1;
+	alert("Thankyou  for attending the online exam \n Your score is: " +m+ " out of 6");
+}
+</script>
+</head>
+<body bgcolor=" #CEC5DD ">
+<form name="examForm" onsubmit="return exam()" method="get">
+<h1><u><center>EXAM FORM</center></u></h1>
+NAME:<input type="text" id="name" name="name"/>
+<p> 1) What does HTML stand for?<br><br>
+<input type="radio" name="one" value="Hyperlink & Text Markup Language">Hyperlink & Text Markup Language<br><br>
+<input type="radio" name="one" value="Hyper Text Markup Language">Hyper Text Markup Language<br><br>
+<input type="radio" name="one" value="Home Tool Markup Language">Home Tool Markup Language<br><br>
+</p>
+<p>
+2)What is the correct HTML element for inserting a line break? <br><br>
+<input type="radio" name="two" value="break">break<br><br>
+<input type="radio" name="two" value="lb">lb<br><br>
+<input type="radio" name="two" value="br">br<br><br>
+</p>
+<p>
+3)The href attribute in the link tag specifies the:<br><br>
+<input type="radio" name="three" value="Destination of a link">Destination of a link<br><br>
+<input type="radio" name="three" value="Link">Link<br><br>
+<input type="radio" name="three" value="HyperText">HyperText<br><br>
+</p>
+<p>
+4)What does CSS stand for?<br><br>
+<input type="radio" name="four" value="Computer Style Sheet">Computer Style Sheet<br><br>
+<input type="radio" name="four" value="Cascading Style Sheet">Cascading Style Sheet<br><br>
+<input type="radio" name="four" value="Creative Style Sheet">Creative Style Sheet<br><br>
+</p>
+<p>
+5)Which of the below CSS properties is used to change the background color of CSS ?<br><br>
+<input type="radio" name="five" value="bg color">bg color<br><br>
+<input type="radio" name="five" value="background-color">background-color<br><br>
+<input type="radio" name="five" value="color-background">color-background<br><br>
+</p>
+<p>
+6)Which of the following property is used to add or subtract space between the words of a sentence?<br><br>
+<input type="radio" name="six" value="text-indent">text-indent<br><br>
+<input type="radio" name="six" value="text-align">text-align<br><br>
+<input type="radio" name="six" value="text-transform">text-transform<br><br>
+</p>
+<p>
+<center>
+<input type="submit" value="SUBMIT">
+<input type="reset" value="RESET">
+</center>
+</p>
+</body>
+</html>
