@@ -1,0 +1,36 @@
+<html>
+<head><title>event handling</title>
+<style>
+h3
+{
+	color:black;
+	font-family:sans-serif;
+	font-weight:Bold;
+}
+body
+{
+	background-color:#C8E8F9;
+}
+</style>
+</head>
+<body>
+<center>
+<br><br>
+<h1 id="pic"><b><i>Blooming Happiness</i></b></h1><br>
+<img id="img1" onmouseover="event1()" onmouseout="event2()" src="/home/ksb/Downloads/flr1.jpeg" width="600" height="400">
+</center>
+<script>
+function event1()
+{
+	document.getElementById("img1").src="/home/ksb/Downloads/flr3.jpeg";
+	document.getElementById("pic").innerHTML="";
+}
+
+function event2()
+{
+	document.getElementById("img1").src="/home/ksb/Downloads/flr5.jpeg";
+	document.getElementById("pic").innerHTML="";
+}
+</script>
+</body>
+</html>
