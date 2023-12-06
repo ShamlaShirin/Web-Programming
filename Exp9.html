@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>form</title>
+</head>
+<body bgcolor="coral">
+<h2><center><b>REGISTRATION FORM</b></center></h2>
+<form name="myform"  onsubmit="return validate()">
+<pre>Name 		  <input type="text" id="name" name="name" size="15" maxlength="25"><br>
+
+Address 	  <input type="text" id="address" name="address" size="30" maxlength="100"><br>
+
+Phone No 	  <input type="phone" id="phone" name="phone" size="10" maxlength="12"><br>
+
+Email 		  <input type="email" id="email" name="email" size="25" maxlength="30"><br>
+
+Password          <input type="Password" id="password" name="password" size="10" maxlength="10"><br>
+
+Re-Enter Password <input type="Password" id="spassword" name="spassword"size="10" maxlength="10"><br>
+
+Add Photo         <input type="file"  id="image" accept="image/*" style="display:"><br>
+   <input type="reset">  <input type="submit">
+</pre>
+</form>
+<script>
+function validate()
+{
+	var name=document.getElementById("name").value;
+	var address=document.getElementById("address").value;
+    var phone=document.getElementById("phone").value;
+    var email=document.getElementById("email").value;
+    var password=document.getElementById("password").value;
+    var spassword=document.getElementById("spassword").value;
+    var fileName=document.getElementById("image").value;
+    var file_extension=fileName.split(".").pop();
+
+	if(name=="")
+	{
+		alert("Name can't be blank");
+	}
+	if(address == "") 
+	{
+         alert("Please enter your address.");
+    }       
+	if(phone == "" ) 
+	{
+         alert("Please enter valid phone number.");   
+    }
+    if(email=="")
+	{
+		  alert("Please enter a valid e-mail address.");   
+    } 
+    if(password=="")
+  	{
+  		alert("Password is required");
+  	}
+	if(password.length<8)
+	{
+		 alert("Password must be atleast 8 characters long");
+	}
+	if(spassword !== password)
+	{
+		 alert("Password must be same");
+	} 
+	if(file_extension=="")
+	{
+		alert("Please upload photo");
+	}
+	 
+}
+</script>
+</body>
+</html>
